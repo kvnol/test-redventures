@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/kvnol/test-redventures/issues"
   },
-  "homepage": "https://github.com/kvnol/test-redventures#readme"
+  "homepage": "https://github.com/kvnol/test-redventures#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
 }
