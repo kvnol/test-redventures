@@ -35,4 +35,16 @@ gulp.task('js', () => {
     .pipe(gulp.dest('app/assets/js'));
 });
 
-gulp.task('default', ['views', 'css', 'js']);
+gulp.task('watch-views', () => {
+  gulp.watch('src/views/**/*.pug', ['views']);
+});
+
+gulp.task('watch-css', () => {
+  gulp.watch('src/assets/sass/**/*.sass', ['css']);
+});
+
+gulp.task('watch-js', () => {
+  gulp.watch('src/assets/js/**/*.js', ['js']);
+});
+
+gulp.task('default', ['views', 'css', 'js', 'watch-views', 'watch-css', 'watch-js']);
