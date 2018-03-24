@@ -1,0 +1,49 @@
+.hero
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 37.5rem
+  @extend %flexbox
+  +align-items(center)
+  +justify-content(center)
+  background:
+    image: url('/assets/img/hero.webp')
+    repeat: no-repeat
+    size: cover
+    position: center top
+
+  &-title
+    font:
+      family: $font-family--secondary
+      size: 1.375rem
+      weight: 600
+    text:
+      align: center
+      transform: uppercase
+    letter-spacing: .1625rem
+    color: $theme-color--light
+
+    &:before
+      content: ""
+      display: block
+      width: 3.420625rem
+      height: 2.6875rem
+      margin: 1rem auto
+      background:
+        image: url(/assets/img/crown.svg)
+        repeat: no-repeat
+        size: 100%
+
+    &__big
+      display: block
+      margin: .75rem auto
+      padding: .75rem 0
+      border:
+        top: 2px solid currentColor
+        bottom: 2px solid currentColor
+      font-size: 2.5rem
+      letter-spacing: .6625rem
+
+      @media (min-width: 64rem)
+        font-size: 4.75rem
