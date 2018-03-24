@@ -1,0 +1,14 @@
+@mixin title ($size)
+  font:
+    family: $font-family--secondary
+
+  @if $size == 'h2'
+    font:
+      size: 1.375rem
+      weight: 400
+    letter-spacing: .15625rem
+
+  @if $size == 'h3'
+    color: $theme-color
+    font-weight: 600
+    letter-spacing: .11375rem
