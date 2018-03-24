@@ -28,6 +28,12 @@ gulp.task('css', () => {
     .pipe(gulp.dest('app/assets/css'));
 });
 
+gulp.task('vendor-css', () => {
+  return gulp.src(files.vendorCSS)
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('app/assets/css'))
+});
+
 gulp.task('js', () => {
   return gulp.src(files.js)
     .pipe(concat('main.js'))
@@ -48,3 +54,4 @@ gulp.task('watch-js', () => {
 });
 
 gulp.task('default', ['views', 'css', 'js', 'watch-views', 'watch-css', 'watch-js']);
+gulp.task('build', ['views', 'css', 'js']);
