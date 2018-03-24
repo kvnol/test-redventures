@@ -7,9 +7,12 @@
     field: field,
     container: calendar,
     bound: false,
+    format: 'MMMM D, YYYY',
     firstDay: 1,
-    onSelect: () => {
-      field.value = moment().format('MMMM D, YYYY');
-    }
+    minDate: new Date(2000, 0, 1),
+    maxDate: new Date(2020, 12, 31),
+    yearRange: [2000,2020]
   });
+
+  picker.setMoment(moment().dayOfYear(366));
 })(window, document);
