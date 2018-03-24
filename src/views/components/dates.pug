@@ -1,10 +1,15 @@
 section.dates
   h2.dates-title Select the dates to stay in Charlotte
 
-  .dates-search
-    label(for="checkin" class="dates-search__label") Check-in
-    input(data-js="date-input" placeholder="Choose a date" id="checkin" class="dates-search__input")
-    label(for="checkin" class="dates-search__label") Check-out
-    input(data-js="date-input" placeholder="Choose a date" id="checkout" class="dates-search__input")
+  .dates-container
+    form.dates-search
+      p
+        label(for="checkin" class="dates-search__label") Check-in
+        input(data-js="date-input" placeholder="Choose a date" id="checkin" class="dates-search__input" disabled="")
+      p
+        label(for="checkout" class="dates-search__label") Check-out
+        input(data-js="date-input" placeholder="Choose a date" id="checkout" class="dates-search__input" disabled="")
+      p
+        button(type="submit" class="dates-search__button") Search hotels
 
-  .dates-calendar(data-js="dates-calendar")
+    .dates-calendar(data-js="dates-calendar")

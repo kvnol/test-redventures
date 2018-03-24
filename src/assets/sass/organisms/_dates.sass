@@ -1,0 +1,36 @@
+.dates
+  max-width: 52.5rem
+  margin: 0 auto
+  padding: 3.75rem 6.25rem
+  +border-radius(.3125rem .3125rem 0 0)
+  +box-shadow(0 -1.5625rem 1.5625rem .3125rem rgba($theme-color--dark, .1))
+  transform: translateY(-4.375rem)
+  background-color: $theme-color--light
+
+  &-title
+    +title(h2)
+    margin-top: 0
+    text-align: center
+
+.dates-container
+  @extend %flexbox
+  +align-items(center)
+  +justify-content(space-between)
+
+.dates-search
+
+  p
+    margin: 2.8125rem 0
+  
+  &__label
+    display: block
+    text-transform: uppercase
+    font-size: 1.375rem
+    letter-spacing: .15625rem
+    color: lighten($theme-color--dark, 33%)
+
+  &__input
+    +input()
+
+  &__button
+    +button(action, default)
