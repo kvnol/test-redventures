@@ -12,6 +12,7 @@ const files = {
     'src/assets/sass/main.sass'
   ],
   js: [
+    'node_modules/pikaday/pikaday.js',
     'src/assets/js/*'
   ]
 };
@@ -37,7 +38,6 @@ gulp.task('vendor-css', () => {
 gulp.task('js', () => {
   return gulp.src(files.js)
     .pipe(concat('main.js'))
-    .pipe(uglify())
     .pipe(gulp.dest('app/assets/js'));
 });
 
@@ -50,7 +50,7 @@ gulp.task('watch-css', () => {
 });
 
 gulp.task('watch-js', () => {
-  gulp.watch('src/assets/js/**/*.js', ['js']);
+  gulp.watch('src/assets/js/*.js', ['js']);
 });
 
 gulp.task('default', ['views', 'css', 'js', 'watch-views', 'watch-css', 'watch-js']);
