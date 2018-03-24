@@ -1,0 +1,11 @@
+.footer
+  @extend %flexbox
+  +align-items(center)
+  +flex-direction(column)
+  +justify-content(center)
+  margin: 2.5rem auto
+
+  &-copy
+    margin: 0
+    font-size: .75rem
+    color: lighten($theme-color--dark, 71%)

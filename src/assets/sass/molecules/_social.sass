@@ -1,0 +1,14 @@
+.social
+  @extend %flexbox
+  +justify-content(center)
+  margin-bottom: 1rem
+
+  &-item
+    width: 2.125rem
+    height: 2.125rem
+
+    &:not(:last-child)
+      margin-right: 1rem
+
+    &__image
+      width: 100%
