@@ -1,0 +1,35 @@
+@mixin button ($type, $size)
+  +border-radius(2.8125rem)
+  -webkit-appearance: none
+  border:
+    style: solid
+    width: .125rem
+  padding: .9375em 2.8125em
+  font:
+    family: $font-family--primary
+    weight: 700
+  cursor: pointer
+
+  @if $type == 'action'
+    border-color: currentColor
+    background-color: transparent
+    color: $theme-color
+
+    &:hover
+      background-color: $theme-color
+      color: $theme-color--light
+
+  @if $type == 'info'
+    border-color: $theme-color--info
+    background-color: $theme-color--info
+    color: $theme-color--light
+
+    &:hover
+      border-color: lighten($theme-color--info, 5%)
+      background-color: lighten($theme-color--info, 5%)
+
+  @if $size == 'default'
+    font-size: .9375rem
+
+  @if $size == 'small'
+    font-size: .8125rem
