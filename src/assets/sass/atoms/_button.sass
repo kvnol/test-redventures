@@ -1,9 +1,6 @@
 @mixin button ($type, $size)
   +border-radius(2.8125rem)
   -webkit-appearance: none
-  border:
-    style: solid
-    width: .125rem
   padding: .9375em 2.8125em
   font:
     family: $font-family--primary
@@ -11,11 +8,12 @@
   cursor: pointer
 
   @if $type == 'action'
-    border-color: currentColor
+    border: .125rem solid $theme-color
     background-color: transparent
     color: $theme-color
 
     &:hover
+      border: .125rem solid $theme-color
       background-color: $theme-color
       color: $theme-color--light
 
