@@ -23,6 +23,7 @@
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
+    "moment": "^2.21.0",
     "pikaday": "^1.7.0"
   }
 }

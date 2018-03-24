@@ -12,6 +12,7 @@ const files = {
     'src/assets/sass/main.sass'
   ],
   js: [
+    'node_modules/moment/min/moment.min.js',
     'node_modules/pikaday/pikaday.js',
     'src/assets/js/*'
   ]
