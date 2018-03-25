@@ -92,6 +92,16 @@
       background-color: $theme-color--light
       color: $theme-color--info
 
+  .is-selected.is-startrange.is-endrange
+    &:before
+      content: none
+
+    .pika-button
+      +border-radius(50%)
+      +box-shadow(none)
+      background-color: $theme-color--info
+      color: $theme-color--light
+
 .pika-row
   line-height: 3.125rem
   
