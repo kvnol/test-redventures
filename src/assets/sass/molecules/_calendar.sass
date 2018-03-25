@@ -1,3 +1,6 @@
+.pika-single.is-hidden
+  display: none
+
 .pika-lendar
   width: 18.125rem
   font-family: $font-family--primary
@@ -52,7 +55,24 @@
     text-decoration: none
     color: lighten($theme-color--dark, 71%)
 
+  .is-disabled .pika-button
+    color: lighten($theme-color--dark, 71%)
+
+  .is-startrange .pika-button
+    +border-radius(50% 0 0 50%) 
+    background-color: $theme-color--info
+    color: $theme-color--light
+
+  .is-inrange
+    .pika-button
+      background-color: $theme-color--info
+      color: $theme-color--light
+
+    + .is-selected .pika-button
+      +box-shadow(inset 0 0 0 2px $theme-color--info)
+
   .is-selected .pika-button
+    +border-radius(50%)
     background-color: $theme-color--info
     color: $theme-color--light
 
@@ -65,7 +85,6 @@
 .pika-button
   width: 100%
   height: 2.5625rem
-  +border-radius(50%)
   -webkit-appearance: none
   border: 0
   background-color: transparent

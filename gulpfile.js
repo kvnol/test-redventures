@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 const files = {
   views: [
