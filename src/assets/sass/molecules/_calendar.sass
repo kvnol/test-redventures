@@ -68,10 +68,13 @@
     background-color: $theme-color--info
     color: $theme-color--light
 
-  .is-selected .pika-button
-    +border-radius(50%)
-    background-color: $theme-color--info
-    color: $theme-color--light
+  .is-selected
+    position: relative
+
+    .pika-button
+      +border-radius(50%)
+      background-color: $theme-color--info
+      color: $theme-color--light
 
   .is-endrange
     position: relative
@@ -104,9 +107,6 @@
 
 .pika-row
   line-height: 3.125rem
-  
-  &:first-child > td
-    padding-top: .5rem
 
 .pika-button
   width: 100%
