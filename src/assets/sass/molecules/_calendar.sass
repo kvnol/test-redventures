@@ -55,26 +55,41 @@
     text-decoration: none
     color: lighten($theme-color--dark, 71%)
 
-  .is-disabled .pika-button
-    color: lighten($theme-color--dark, 71%)
+  .is-disabled
+    .pika-button
+      color: lighten($theme-color--dark, 71%)
 
   .is-startrange .pika-button
     +border-radius(50% 0 0 50%) 
     background-color: $theme-color--info
     color: $theme-color--light
 
-  .is-inrange
-    .pika-button
-      background-color: $theme-color--info
-      color: $theme-color--light
-
-    + .is-selected .pika-button
-      +box-shadow(inset 0 0 0 2px $theme-color--info)
+  .is-inrange .pika-button
+    background-color: $theme-color--info
+    color: $theme-color--light
 
   .is-selected .pika-button
     +border-radius(50%)
     background-color: $theme-color--info
     color: $theme-color--light
+
+  .is-endrange
+    position: relative
+
+    &:before
+      content: ""
+      height: 2.5625rem
+      width: 50%
+      background: #79bd1a
+      display: block
+      position: absolute
+      top: 4px
+
+    .pika-button
+      position: relative
+      +box-shadow(inset 0 0 0 2px $theme-color--info)
+      background-color: $theme-color--light
+      color: $theme-color--info
 
 .pika-row
   line-height: 3.125rem
