@@ -19,6 +19,7 @@
   endDate,
   updateStartDate = function() {
     startPicker.setStartRange(startDate);
+    startPicker.draw();
     endPicker.setStartRange(startDate);
     endPicker.setMinDate(startDate);
   },
@@ -26,6 +27,7 @@
     startPicker.setEndRange(endDate);
     startPicker.setMaxDate(endDate);
     endPicker.setEndRange(endDate);
+    endPicker.draw();
   },
   startPicker = new Pikaday({
     field: document.querySelector('[data-js="field-checkin"]'),
