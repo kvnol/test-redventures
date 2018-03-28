@@ -11,5 +11,10 @@ html(lang="en")
     include includes/header.pug
     main.main
       include components/dates.pug
+      .results
+        .results-title Best choices between <span data-js="date-start"></span> and <span data-js="date-end"></span>
+        .results-container
+          include components/filters.pug
+          include components/hotels.pug
     include includes/footer.pug
     script(src="/assets/js/main.js")

@@ -41,6 +41,8 @@
       updateStartDate();
       single[0].classList.add('is-hidden');
       single[1].classList.remove('is-hidden');
+      let date = doc.createTextNode(this.getMoment().format('MMMM D, YYYY'));
+      doc.querySelector('[data-js="date-start"]').appendChild(date);
     },
     i18n: i18n,
     firstDay: 0
@@ -55,6 +57,8 @@
     onSelect: function() {
       endDate = this.getDate();
       updateEndDate();
+      let date = doc.createTextNode(this.getMoment().format('MMMM D, YYYY'));
+      doc.querySelector('[data-js="date-end"]').appendChild(date);
     },
     i18n: i18n,
     firstDay: 0

@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "cd app && python -m http.server 9001",
     "build": "gulp build && start app/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kvnol/test-redventures.git"
   },
-  "author": "",
+  "author": "@kvnol",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kvnol/test-redventures/issues"
