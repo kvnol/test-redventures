@@ -15,6 +15,10 @@
   &__title
     +title(h4)
 
+  &__line
+    @extend %flexbox
+    +align-items(center)
+
 .price-filter__range
   +range()
 
@@ -39,3 +43,6 @@
 
     &:before
       content: "$"
+
+.rate-filter__checkbox
+  +checkbox()
