@@ -11,7 +11,7 @@ html(lang="en")
     include includes/header.pug
     main.main
       include components/dates.pug
-      .results
+      .results.is-hidden(data-js="results")
         .results-title Best choices between <span data-js="date-start"></span> and <span data-js="date-end"></span>
         .results-container
           include components/filters.pug

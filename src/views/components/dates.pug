@@ -4,12 +4,12 @@ section.dates
   .dates-container
     form.dates-search
       p
-        label(for="checkin" class="dates-search__label") Check-in
-        input(data-js="field-checkin" placeholder="Choose a date" id="checkin" class="dates-search__input")
+        label(for="checkin", class="dates-search__label") Check-in
+        input(data-js="field-checkin", placeholder="Choose a date", id="checkin", class="dates-search__input")
       p
-        label(for="checkout" class="dates-search__label") Check-out
-        input(data-js="field-checkout" placeholder="Choose a date" id="checkout" class="dates-search__input")
+        label(for="checkout", class="dates-search__label") Check-out
+        input(data-js="field-checkout", placeholder="Choose a date", id="checkout", class="dates-search__input")
       p
-        button(type="submit" class="dates-search__button") Search hotels
+        button(disabled, class="dates-search__button", data-js="date-search") Search hotels
 
     .dates-calendar(data-js="dates-calendar")

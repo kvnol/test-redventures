@@ -1,11 +1,25 @@
 .results
   max-width: 80rem
   margin: 0 auto
+  transition-property: transform, opacity
+  transition-duration: .8s, .8s
+  transform: translateY(-7rem)
 
   &-title
     +title(h2)
     margin: 0 0 3rem 0
     text-align: center
+
+  &.is-hidden
+    position: relative
+    height: 0
+    overflow: hidden
+    opacity: 0
+
+  &.is-show
+    display: block
+    transform: translateY(0)
+    opacity: 1
 
 .results-container
   @extend %flexbox

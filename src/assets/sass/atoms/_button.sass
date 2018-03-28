@@ -17,6 +17,15 @@
       background-color: $theme-color
       color: $theme-color--light
 
+    &[disabled]
+      border-color: lighten($theme-color--dark, 80%)
+      color: lighten($theme-color--dark, 80%)
+      cursor: not-allowed
+
+      &:hover
+        background-color: transparent
+        color: lighten($theme-color--dark, 80%)
+
   @if $type == 'info'
     border-color: $theme-color--info
     background-color: $theme-color--info
