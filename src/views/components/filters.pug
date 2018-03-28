@@ -3,7 +3,14 @@ aside.filters
 
   .price-filter.filters-widget
     h5.filters-widget__title Price Range per <strong>night</strong>
-    input(type="range", data-js="price-range", min="100", max="600", step="100", value="100")
+    input.price-filter__range(type="range", data-js="price-range", min="100", max="600", step="100", value="100")
+    .price-filter__subtitle
+      p.price-filter__subtitle-min
+        span.price-filter__subtitle__label Min
+        span.price-filter__subtitle__value(data-js="subtitle-minvalue") 100
+      p.price-filter__subtitle-max
+        span.price-filter__subtitle__label Max
+        span.price-filter__subtitle__value(data-js="subtitle-maxvalue") 600
 
   .rate-filter.filters-widget
     h5.filters-widget__title Stars
