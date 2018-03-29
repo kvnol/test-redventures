@@ -1,0 +1,29 @@
+.hotel
+  @extend %flexbox
+  +align-items(center)
+  +box-shadow(0 .1875rem 1.25rem rgba($theme-color--dark,.1))
+  +border-radius(.3125rem)
+  transition: .5s all ease
+  background-color: $theme-color--light
+
+  &:hover
+    transform: translateY(-.3125rem)
+    +box-shadow(0 .1875rem 1.25rem .1875rem rgba($theme-color--dark,.15))
+
+  &:not(:last-child)
+    margin-bottom: 1.875rem
+
+  &-figure
+    margin: 2rem 1.875rem 2rem -3.75rem
+
+    img
+      +border-radius(.3125rem)
+      +box-shadow(0 0 .625rem .1875rem rgba($theme-color--dark,.15))
+      
+.hotel-info
+  &__title
+    +title(h3)
+
+  &__description
+    font-size: .9375rem
+    color: lighten($theme-color--dark, 71%)
