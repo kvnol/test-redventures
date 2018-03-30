@@ -14,7 +14,26 @@
     single[1].classList.add('is-hidden');
   }, false);
 
-  let startDate, endDate;
+  const dhm = (t) => {
+    let cd = 24 * 60 * 60 * 1000,
+        ch = 60 * 60 * 1000,
+        d = Math.floor(t / cd),
+        h = Math.floor( (t - d * cd) / ch),
+        m = Math.round( (t - d * cd - h * ch) / 60000),
+        pad = function(n){ return n < 10 ? '0' + n : n; };
+    if( m === 60 ){
+      h++;
+      m = 0;
+    }
+
+    if( h === 24 ){
+      d++;
+      h = 0;
+    }
+    return d;
+  };
+
+  let startDate, endDate, totalDay;
   let updateStartDate = function() {
     startPicker.setStartRange(startDate);
     startPicker.draw();
@@ -59,6 +78,14 @@
       updateEndDate();
       let date = this.getMoment().format('MMMM D, YYYY');
       doc.querySelector('[data-js="date-end"]').innerHTML = date;
+
+      totalDay = this.getDate() - startPicker.getDate();
+      let $totalNight = doc.querySelectorAll('[data-js="total-nights"]');
+      $totalNight.forEach((item) => {
+        if (dhm(totalDay) === 1)
+          return item.innerHTML = `${dhm(totalDay)} night`;
+        return item.innerHTML = `${dhm(totalDay)} nights`;
+      });
     },
     i18n: i18n,
     firstDay: 0
