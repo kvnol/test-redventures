@@ -24,6 +24,40 @@
       +border-radius(.3125rem)
       +box-shadow(0 0 .625rem .1875rem rgba($theme-color--dark,.15))
 
+  &-content
+    @extend %flexbox
+    +align-items(center)
+
+  &-prices
+    width: 60%
+    margin: 0 3.125rem
+    border-left: 2px solid lighten($theme-color--dark, 90%)
+    color: lighten($theme-color--dark, 71%)
+    text-align: right
+    letter-spacing: .141875rem
+
+    strong
+      display: block
+
+      &:before
+        content: "$"
+
+    &__total
+      font-size: 1rem
+
+      strong
+        font-size: 1.875rem
+        color: $theme-color--info
+
+    &__pernight
+      font:
+        size: .875rem
+        weight: 300
+
+      strong
+        font-size: 1.25rem
+        color: $theme-color
+
   &.is-hidden
     position: absolute
     opacity: 0

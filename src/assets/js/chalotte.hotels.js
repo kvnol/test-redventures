@@ -42,6 +42,14 @@
             </p>
           </div>
           <div class="hotel-prices">
+            <p class="hotel-prices__total">
+              Total <span data-js="total-nights"></span>
+              <strong class="hotel-prices__total__value"></strong>
+            </p>
+            <p class="hotel-prices__pernight">
+              Per night
+              <strong class="hotel-prices__pernight__value">${data.price}</strong>
+            </p>
           </div>
         </div>
       </article>
