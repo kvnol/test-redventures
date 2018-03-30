@@ -5,6 +5,10 @@
   +border-radius(.3125rem)
   transition: .5s all ease
   background-color: $theme-color--light
+  margin-left: 3.75rem
+
+  @media (min-width: 64rem)
+    margin-left: 0
 
   &:hover
     transform: translateY(-.3125rem)
@@ -27,3 +31,15 @@
   &__description
     font-size: .9375rem
     color: lighten($theme-color--dark, 71%)
+
+  &__rate
+    display: block
+    height: .75rem
+    background: 
+      image: url(/assets/img/star-filled.svg)
+      repeat: repeat-x
+      size: .75rem
+
+    @for $i from 1 through 5
+      &.rate-#{$i}
+        width: .75rem * $i

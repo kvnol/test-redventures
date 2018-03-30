@@ -33,8 +33,7 @@
         </figure>
         <div class="hotel-content">
           <div class="hotel-info">
-            <div class="hotel-info__rate">
-            </div>
+            <span class="hotel-info__rate rate-${data.rate}"></span>
             <h3 class="hotel-info__title">${data.name}</h3>
             <p class="hotel-info__description">${data.description}</p>
           </div>
