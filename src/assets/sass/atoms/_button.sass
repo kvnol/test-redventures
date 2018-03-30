@@ -1,11 +1,10 @@
 @mixin button ($type, $size)
   +border-radius(2.8125rem)
   -webkit-appearance: none
-  padding: .9375em 2.8125em
-  font:
-    family: $font-family--primary
-    weight: 700
+  padding: .8125em 2.8125em
+  font-family: $font-family--primary
   cursor: pointer
+  transition: .2s all ease
 
   @if $type == 'action'
     border: .125rem solid $theme-color
@@ -36,7 +35,11 @@
       background-color: lighten($theme-color--info, 5%)
 
   @if $size == 'default'
-    font-size: .9375rem
+    font:
+      size: .9375rem
+      weight: 700
 
   @if $size == 'small'
-    font-size: .8125rem
+    font:
+      size: .8125rem
+      weight: 500

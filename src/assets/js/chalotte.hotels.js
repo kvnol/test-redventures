@@ -36,6 +36,10 @@
             <span class="hotel-info__rate rate-${data.rate}"></span>
             <h3 class="hotel-info__title">${data.name}</h3>
             <p class="hotel-info__description">${data.description}</p>
+            <p class="hotel-info__button">
+              <a href="#" class="hotel-info__button__book">Book now</a>
+              <a href="#" class="hotel-info__button__history" data-js="show-history">Price history</a>
+            </p>
           </div>
           <div class="hotel-prices">
           </div>

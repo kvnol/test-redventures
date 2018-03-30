@@ -43,3 +43,13 @@
     @for $i from 1 through 5
       &.rate-#{$i}
         width: .75rem * $i
+
+  &__button
+    margin-top: 2rem
+
+    &__book
+      +button(action, small)
+      margin-right: 1rem
+
+    &__history
+      +button(info, small)
