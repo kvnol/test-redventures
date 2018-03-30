@@ -27,7 +27,7 @@
 
   const createMarkupHotel = (data) => {
     return (`
-      <article class="hotel">
+      <article class="hotel" data-js="hotel" data-price="${data.price}" data-rate="rate-${data.rate}">
         <figure class="hotel-figure">
           <img src="${data.image}" alt="${data.name}">
         </figure>
