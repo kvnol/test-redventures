@@ -18,7 +18,27 @@
     };
 
     const rateFilter = () => {
+      const rate = doc.querySelectorAll('.rate-filter__checkbox');
 
+      rate.forEach((item) => {
+        item.addEventListener('change', (e) => {
+          const checked = e.target;
+          if (e.target.checked) {
+            hotels.forEach((item) => {
+              if (checked.dataset.rate !== item.dataset.rate)
+                item.classList.add('is-hidden');
+              else
+                item.classList.remove('is-hidden');
+            });
+          }
+          else {
+            hotels.forEach((item) => {
+              if (checked.dataset.rate !== item.dataset.rate)
+                item.classList.remove('is-hidden');
+            });
+          }
+        });
+      });
     };
 
     rangeFilter();
